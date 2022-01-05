@@ -1,0 +1,41 @@
+﻿@model BDAutoASP.Models.Modele
+
+@{
+    ViewBag.Title = "Suppression";
+}
+
+<h2>Suppression</h2>
+
+<h3>êtes-vous sûr de vouloir supprimer cet enregistrement ?</h3>
+<div>
+    <h4>Modele</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Marque")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marque.MNom)
+        </dd>
+
+        <dt>
+            @Html.Label("Modele")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MNom)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

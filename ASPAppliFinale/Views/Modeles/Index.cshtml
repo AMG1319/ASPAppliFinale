@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BDAutoASP.Models.Modele>
+
+@{
+    ViewBag.Title = "Modele";
+}
+
+<h2>Modele</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un nouveau", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Marque")
+        </th>
+        <th>
+            @Html.Label("Modele")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marque.MNom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MNom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDModel }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDModel })
+        </td>
+    </tr>
+}
+
+</table>

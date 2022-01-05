@@ -1,4 +1,4 @@
-﻿@model BDAutoASP.Models.Marque
+﻿@model BDAutoASP.Models.Modele
 
 @{
     ViewBag.Title = "Modification";
@@ -10,15 +10,23 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
-        <h4>Marque</h4>
+        <h4>Modele</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.IDMarque)
+        @Html.HiddenFor(model => model.IDModel)
 
         <div class="form-group">
-            @Html.Label("Nom")
+            @Html.LabelFor(model => model.IDMarque, "IDMarque", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("IDMarque", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IDMarque, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MNom, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.MNom, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MNom, "", new { @class = "text-danger" })

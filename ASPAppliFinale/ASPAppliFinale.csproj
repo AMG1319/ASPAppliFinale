@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarquesController.cs" />
+    <Compile Include="Controllers\ModelesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +182,10 @@
     <Content Include="Views\Marques\Delete.cshtml" />
     <Content Include="Views\Marques\Edit.cshtml" />
     <Content Include="Views\Marques\Index.cshtml" />
+    <Content Include="Views\Modeles\Create.cshtml" />
+    <Content Include="Views\Modeles\Delete.cshtml" />
+    <Content Include="Views\Modeles\Edit.cshtml" />
+    <Content Include="Views\Modeles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
