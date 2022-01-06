@@ -1,0 +1,33 @@
+﻿@model List<BDAutoASP.Models.Marque>
+@{
+    ViewBag.Title = "Modele";
+}
+<h2>Modele</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+        <form>
+            <div class="form-group">
+                <label class="control-label">Marques</label>
+                <select id="ddlMarque" class="form-control" onchange="selectedtext(this)">
+                    @foreach (var item in Model)
+                    {
+                        <option>@item.MNom</option>
+                    }
+
+                </select>
+
+            </div>
+            <input type="text" id="txt"></input>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function selectedtext(ddlitem) {
+        var selvalue = ddlitem.value;
+        var seltext = ddlitem.options[ddlitem.selectedIndex].innerHTML;
+        $('#txt').val(seltext);
+    }
+</script>

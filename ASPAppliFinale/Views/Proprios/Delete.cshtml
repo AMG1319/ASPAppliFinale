@@ -1,0 +1,65 @@
+﻿@model BDAutoASP.Models.Proprio
+
+@{
+    ViewBag.Title = "Suppression";
+}
+
+<h2>Suppression</h2>
+
+<h3>êtes-vous sûr de vouloir supprimer cet enregistrement ?</h3>
+<div>
+    <h4>Proprio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Nom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNom)
+        </dd>
+
+        <dt>
+            @Html.Label("Prénom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PPrenom)
+        </dd>
+
+        <dt>
+            @Html.Label("Numéro de téléphone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNumTel)
+        </dd>
+
+        <dt>
+            @Html.Label("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PMail)
+        </dd>
+
+        <dt>
+            @Html.Label("Mot de passe")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PMdp)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

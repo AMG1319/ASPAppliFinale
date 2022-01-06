@@ -129,6 +129,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarquesController.cs" />
     <Compile Include="Controllers\ModelesController.cs" />
+    <Compile Include="Controllers\PropriosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +187,10 @@
     <Content Include="Views\Modeles\Delete.cshtml" />
     <Content Include="Views\Modeles\Edit.cshtml" />
     <Content Include="Views\Modeles\Index.cshtml" />
+    <Content Include="Views\Proprios\Create.cshtml" />
+    <Content Include="Views\Proprios\Delete.cshtml" />
+    <Content Include="Views\Proprios\Edit.cshtml" />
+    <Content Include="Views\Proprios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

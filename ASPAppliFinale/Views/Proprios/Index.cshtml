@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BDAutoASP.Models.Proprio>
+
+@{
+    ViewBag.Title = "Proprio";
+}
+
+<h2>Proprio</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un nouveau", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Nom")
+        </th>
+        <th>
+            @Html.Label("Prénom")
+        </th>
+        <th>
+            @Html.Label("Numéro de téléphone")
+        </th>
+        <th>
+            @Html.Label("Email")
+        </th>
+        <th>
+            @Html.Label("Mot de passe")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPrenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNumTel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMdp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDProprio }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDProprio })
+        </td>
+    </tr>
+}
+
+</table>
