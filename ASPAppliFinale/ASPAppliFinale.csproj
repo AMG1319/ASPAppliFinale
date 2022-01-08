@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AnnoncesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginsController.cs" />
     <Compile Include="Controllers\MarquesController.cs" />
     <Compile Include="Controllers\ModelesController.cs" />
     <Compile Include="Controllers\PropriosController.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Models\Modele.cs" />
     <Compile Include="Models\Proprio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\VMProprio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -196,6 +198,7 @@
     <Content Include="Views\Annonces\Delete.cshtml" />
     <Content Include="Views\Annonces\Edit.cshtml" />
     <Content Include="Views\Annonces\Index.cshtml" />
+    <Content Include="Views\Logins\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

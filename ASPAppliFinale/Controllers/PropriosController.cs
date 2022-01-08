@@ -15,8 +15,10 @@ namespace ASPAppliFinale.Controllers
         private BDContext db = new BDContext();
 
         // GET: Proprios
+        [Authorize]
         public ActionResult Index()
         {
+            ViewData["Mail"] = User.Identity.Name;
             return View(db.Proprios.ToList());
         }
 

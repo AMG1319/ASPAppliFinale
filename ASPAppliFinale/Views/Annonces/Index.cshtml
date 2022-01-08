@@ -4,11 +4,12 @@
     ViewBag.Title = "Ajout";
 }
 
-<h2>Ajout</h2>
+<h2>Ajout @ViewData["Mail"]</h2>
 
 <p>
     @Html.ActionLink("Ajouter une nouvelle", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -35,35 +36,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Modele.MNom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proprio.PNom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AAnnee)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AKilometrage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ACouleur)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.APrix)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AStatut)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDAnnonce }) |
-            @Html.ActionLink("Vendu", "Vendu", new { id=item.IDAnnonce }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDAnnonce })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modele.MNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proprio.PNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AAnnee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AKilometrage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACouleur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APrix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AStatut)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDAnnonce }) |
+                @Html.ActionLink("Vendu", "Vendu", new { id = item.IDAnnonce }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDAnnonce })
+            </td>
+        </tr>
+    }
 
 </table>

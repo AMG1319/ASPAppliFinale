@@ -83,7 +83,6 @@ D:\GitKraken\ASPAppliFinale\ASPAppliFinale\bin\fr\System.Web.Razor.resources.dll
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\bin\fr\System.Web.WebPages.resources.dll
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\bin\fr\System.Web.WebPages.Deployment.resources.dll
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\bin\fr\System.Web.WebPages.Razor.resources.dll
-D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.csproj.AssemblyReference.cache
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.csproj.CoreCompileInputs.cache
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.csproj.CopyComplete
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.dll
