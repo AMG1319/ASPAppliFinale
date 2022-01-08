@@ -31,10 +31,10 @@
 
                             if (HttpContext.Current.User.Identity.Name == "marouane-_-hammani@outlook.be")
                             {
-                                <li>@Html.ActionLink("Nouvelle Marque", "Index", "Marques")</li>
-                                <li>@Html.ActionLink("Nouveau Modele", "Index", "Modeles")</li>
-                                <li>@Html.ActionLink("Nouveau Proprio", "Index", "Proprios")</li>
-                                <li>@Html.ActionLink("Nouvelle Annonce", "Create", "Annonces")</li>
+                                <li>@Html.ActionLink("Marques", "Index", "Marques")</li>
+                                <li>@Html.ActionLink("Modeles", "Index", "Modeles")</li>
+                                <li>@Html.ActionLink("Proprios", "Index", "Proprios")</li>
+                                <li>@Html.ActionLink("Annonces", "Index", "Annonces")</li>
                             }
                             <li>@Html.ActionLink("Déconnexion", "Logout", "Logins")</li>
                         }

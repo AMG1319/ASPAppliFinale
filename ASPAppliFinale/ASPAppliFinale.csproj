@@ -199,6 +199,7 @@
     <Content Include="Views\Annonces\Edit.cshtml" />
     <Content Include="Views\Annonces\Index.cshtml" />
     <Content Include="Views\Logins\Login.cshtml" />
+    <Content Include="Views\Home\AnnoncesEnligne.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -89,3 +89,4 @@ D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.dll
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.pdb
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.Migrations.InitialCreate.resources
 D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.csproj.GenerateResource.cache
+D:\GitKraken\ASPAppliFinale\ASPAppliFinale\obj\Debug\ASPAppliFinale.csproj.AssemblyReference.cache

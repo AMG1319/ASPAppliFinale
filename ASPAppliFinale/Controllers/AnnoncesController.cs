@@ -18,7 +18,6 @@ namespace ASPAppliFinale.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            ViewData["Mail"] = User.Identity.Name;
             var annonces = db.Annonces.Include(a => a.Modele).Include(a => a.Proprio);
             return View(annonces.ToList());
         }
