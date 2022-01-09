@@ -37,6 +37,10 @@
                                 <li>@Html.ActionLink("Proprios", "Index", "Proprios")</li>
                                 <li>@Html.ActionLink("Annonces", "Index", "Annonces")</li>
                             }
+                            else
+                            {
+                                <li>@Html.ActionLink("Mes Annonces", "Index", "MesAnnonces")</li>
+                            }
                             <li>@Html.ActionLink("Déconnexion", "Logout", "Logins")</li>
                         }
                         else

@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginsController.cs" />
     <Compile Include="Controllers\MarquesController.cs" />
+    <Compile Include="Controllers\MesAnnoncesController.cs" />
     <Compile Include="Controllers\ModelesController.cs" />
     <Compile Include="Controllers\PropriosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,6 +203,7 @@
     <Content Include="Views\Annonces\Index.cshtml" />
     <Content Include="Views\Logins\Login.cshtml" />
     <Content Include="Views\Home\AnnoncesEnligne.cshtml" />
+    <Content Include="Views\MesAnnonces\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
