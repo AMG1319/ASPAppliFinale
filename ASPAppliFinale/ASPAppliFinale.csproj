@@ -146,6 +146,8 @@
     <Compile Include="Models\Modele.cs" />
     <Compile Include="Models\Proprio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\VMAnnonce.cs" />
+    <Compile Include="ViewModel\VMParamRecherche.cs" />
     <Compile Include="ViewModel\VMProprio.cs" />
   </ItemGroup>
   <ItemGroup>

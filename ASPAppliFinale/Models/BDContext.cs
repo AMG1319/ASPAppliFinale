@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace BDAutoASP.Models
+namespace ASPAppliFinale.Models
 {
     public class BDContext : DbContext
     {

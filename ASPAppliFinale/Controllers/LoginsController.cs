@@ -1,5 +1,5 @@
 ﻿using ASPAppliFinale.ViewModel;
-using BDAutoASP.Models;
+using ASPAppliFinale.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(VMProprio user, string ReturnUrl)
+        public ActionResult Login(VMProprio user)
         {
             if(IsValid(user))
             {
@@ -49,6 +49,19 @@ namespace ASPAppliFinale.Controllers
                 return true;
             }
                 
+        }
+
+        public ActionResult LoginMan(string Email, string Mdp)
+        {
+            VMProprio a = new VMProprio();
+            a.Email = Email;
+            a.Mdp = Mdp;
+            if (IsValid(a))
+            {
+                FormsAuthentication.SetAuthCookie(a.Email, false);
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Index", "Home"); 
         }
     }
 }

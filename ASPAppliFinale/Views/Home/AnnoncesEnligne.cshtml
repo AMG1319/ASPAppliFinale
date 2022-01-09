@@ -1,20 +1,18 @@
-﻿@model IEnumerable<BDAutoASP.Models.Annonce>
+﻿@model List<ASPAppliFinale.ViewModel.VMAnnonce>
 
 @{
-    ViewBag.Title = "Ajout";
+    ViewBag.Title = "Resultat";
 }
 
-<h2>Ajout</h2>
-
-
+<h2>Voiture Disponible à la vente</h2>
 
 <table class="table">
     <tr>
         <th>
-            @Html.Label("Modele")
+            @Html.Label("Marque")
         </th>
         <th>
-            @Html.Label("Proprio")
+            @Html.Label("Model")
         </th>
         <th>
             @Html.Label("Annee")
@@ -31,6 +29,15 @@
         <th>
             @Html.Label("Statut")
         </th>
+        <th>
+            @Html.Label("Nom du proprio")
+        </th>
+        <th>
+            @Html.Label("Prenom du proprio")
+        </th>
+        <th>
+            @Html.Label("Numéro de tel")
+        </th>
         <th></th>
     </tr>
 
@@ -38,25 +45,34 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Modele.MNom)
+                @Html.DisplayFor(modelItem => item.VMMarque.MNom)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Proprio.PNom)
+                @Html.DisplayFor(modelItem => item.VMModele.MNom)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AAnnee)
+                @Html.DisplayFor(modelItem => item.VMAnnonc.AAnnee)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AKilometrage)
+                @Html.DisplayFor(modelItem => item.VMAnnonc.AKilometrage)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ACouleur)
+                @Html.DisplayFor(modelItem => item.VMAnnonc.ACouleur)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.APrix)
+                @Html.DisplayFor(modelItem => item.VMAnnonc.APrix)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AStatut)
+                @Html.DisplayFor(modelItem => item.VMAnnonc.AStatut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VMProprio.PNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VMProprio.PPrenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VMProprio.PNumTel)
             </td>
         </tr>
     }
