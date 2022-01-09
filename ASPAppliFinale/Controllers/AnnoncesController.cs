@@ -39,8 +39,6 @@ namespace ASPAppliFinale.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
-            
         }
 
         // GET: Annonces/Create

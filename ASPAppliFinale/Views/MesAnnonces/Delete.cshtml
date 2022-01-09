@@ -1,0 +1,81 @@
+﻿@model ASPAppliFinale.Models.Annonce
+
+@{
+    ViewBag.Title = "Suppression";
+}
+
+<h2>Suppression</h2>
+
+<h3>êtes-vous sûr de vouloir supprimer cette annonce ?</h3>
+<div>
+    <h4>Annonce</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Modele")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modele.MNom)
+        </dd>
+
+        <dt>
+            @Html.Label("Proprio")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proprio.PNom)
+        </dd>
+
+        <dt>
+            @Html.Label("Annee")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AAnnee)
+        </dd>
+
+        <dt>
+            @Html.Label("Kilometrage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKilometrage)
+        </dd>
+
+        <dt>
+            @Html.Label("Couleur")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACouleur)
+        </dd>
+
+        <dt>
+            @Html.Label("Prix")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APrix)
+        </dd>
+
+        <dt>
+            @Html.Label("Statut")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AStatut)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
