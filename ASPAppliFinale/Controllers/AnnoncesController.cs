@@ -23,6 +23,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Annonces/Vendu/5
+        [Authorize]
         public ActionResult Vendu(int? id)
         {
             if (id == null)
@@ -43,6 +44,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Annonces/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.IDModel = new SelectList(db.Modeles, "IDModel", "MNom");
@@ -55,6 +57,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "IDAnnonce,IDProprio,IDModel,AAnnee,AKilometrage,ACouleur,APrix,AStatut")] Annonce annonce)
         {
             if (ModelState.IsValid)
@@ -70,6 +73,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Annonces/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -91,6 +95,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "IDAnnonce,IDProprio,IDModel,AAnnee,AKilometrage,ACouleur,APrix,AStatut")] Annonce annonce)
         {
             if (ModelState.IsValid)
@@ -105,6 +110,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Annonces/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -122,6 +128,7 @@ namespace ASPAppliFinale.Controllers
         // POST: Annonces/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Annonce annonce = db.Annonces.Find(id);

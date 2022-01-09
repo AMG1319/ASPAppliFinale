@@ -15,6 +15,7 @@ namespace ASPAppliFinale.Controllers
         private BDContext db = new BDContext();
 
         // GET: Modeles
+        [Authorize]
         public ActionResult Index()
         {
             var modeles = db.Modeles.Include(m => m.Marque);
@@ -22,6 +23,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Modeles/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.IDMarque = new SelectList(db.Marques, "IDMarque", "MNom");
@@ -33,6 +35,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "IDModel,IDMarque,MNom")] Modele modele)
         {
             if (ModelState.IsValid)
@@ -47,6 +50,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Modeles/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -67,6 +71,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "IDModel,IDMarque,MNom")] Modele modele)
         {
             if (ModelState.IsValid)
@@ -80,6 +85,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Modeles/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -97,6 +103,7 @@ namespace ASPAppliFinale.Controllers
         // POST: Modeles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Modele modele = db.Modeles.Find(id);

@@ -15,11 +15,13 @@ namespace ASPAppliFinale.Controllers
         private BDContext db = new BDContext();
 
         // GET: Marques
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Marques.ToList());
         }
         // GET: Marques/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -30,6 +32,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "IDMarque,MNom")] Marque marque)
         {
             if (ModelState.IsValid)
@@ -43,6 +46,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Marques/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -62,6 +66,7 @@ namespace ASPAppliFinale.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "IDMarque,MNom")] Marque marque)
         {
             if (ModelState.IsValid)
@@ -74,6 +79,7 @@ namespace ASPAppliFinale.Controllers
         }
 
         // GET: Marques/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -91,6 +97,7 @@ namespace ASPAppliFinale.Controllers
         // POST: Marques/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Marque marque = db.Marques.Find(id);
