@@ -19,6 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
             </div>
             <div class="navbar-collapse collapse">
@@ -56,6 +57,10 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        @if (HttpContext.Current.User.Identity.Name !="")
+        {
+            <label>Vous êtes connecté à @HttpContext.Current.User.Identity.Name</label>
+        }
         <footer>
             <p>&copy; @DateTime.Now.Year - HAMMANI Marouane</p>
         </footer>

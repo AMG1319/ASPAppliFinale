@@ -12,8 +12,8 @@ namespace ASPAppliFinale.Models
         public string PNom { get; set; }
         public string PPrenom { get; set; }
         public string PNumTel { get; set; }
-        [Required(ErrorMessage = "Email ou Pseudo Requis !")]
-        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail is not valid")]
+        [Required(ErrorMessage = "Email Requis !")]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "l'addresse email n'est pas valide")]
         public string PMail { get; set; }
         [Required(ErrorMessage = "Mot de passe requis !")]
         public string PMdp { get; set; }
