@@ -51,6 +51,9 @@ namespace ASPAppliFinale.Models
             modelBuilder.Entity<Modele>().HasMany(a => a.Annonces).WithRequired(b => b.Modele).HasForeignKey<int>(c => c.IDModel);
             modelBuilder.Entity<Modele>().HasRequired(a => a.Marque).WithMany(b => b.Modeles).HasForeignKey<int>(c => c.IDMarque);
 
+            modelBuilder.Entity<Proprio>().Property(m => m.PMail).IsRequired();
+            modelBuilder.Entity<Proprio>().Property(m => m.PMdp).IsRequired();
+
             base.OnModelCreating(modelBuilder);
         }
     }
